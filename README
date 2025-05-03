@@ -1,4 +1,4 @@
-We can start of by going to our Project Folder
+We can start off by going to our Project Folder
 
 Copy the code below to see the main page of the CLI Program
 >> python -m linked_cli.cli --help
@@ -35,9 +35,9 @@ Test Case 5.2
 It generates + sorts, hence there will be 3 rows of sorted output, where the items are sorted by date, in descending order
 
 Test Case 6 (Generate and search in one shot, without Seed)
->> python -m linked_cli.cli -g 3 -s "fsfvtB"
+>> python -m linked_cli.cli -g 3 -s fsfvtB
 
-If "fsfvtB" happens to be one of the 3 that is generated, it will print that JSON line. Otherwise, "No item named fsfvtB" is printed
+If "fsfvtB" happens to be one of the 3 that is generated, it will print that JSON line. Otherwise, "No item named fsfvtB is printed"
 
 Test Case 7 (Generating with a Seed, aka Reproducible List)
 >> python -m linked_cli.cli --seed 42 -g 4
