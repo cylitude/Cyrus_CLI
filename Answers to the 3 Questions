@@ -1,0 +1,25 @@
+Answers to the 3 Questions
+
+Question 1: 
+A singly linked list has no random-access indexing. To find a particular name, we will need to traverse node by node, comparing each node.data.name to our desired target. If the target is at the head, we get to stop immediately [Best-Case O(1)]. If it is at the tail, we will need to examine every node [Worst-Case O(n)]. We must potentially walk through all n nodes to see if a match exists, resulting in O(n) time complexity.
+
+Question 2:
+For sorting the linked list, I used Mergesort, which results in O(n log n) time complexity.
+Mergesort repeatedly splits the list in half (logarithmic depth) and does a linear-time merge at each level.
+
+(1) Divide Step:
+Splitting the list of size n into two halves of size n/2
+
+(2) Recurse Step:
+The method involves sorting each half recursively. If T(n) is the time to sort n items, we will obtain >> 2 x T(n/2)
+
+(3) Merge Step:
+Once we have two sorted halves, we can put them together in a single pass over all n elements. This phase leads to O(n) time to compare and link nodes. There are also log₂ n levels of splitting (because you halve n each time until you reach size 1). Thus, using the Master Theorem, we eventually obtain O(n log n).
+
+Question 3:
+A linked list is a chain of nodes—each holding data and a next pointer—that lets you insert or remove at the head, tail (with a tail pointer), or any known position in O(1) time but costs O(n) to search for a value. Thus, linked lists carry extra pointer overhead per node but offer full traversal and mid-list mutation.
+Example Use Case: Music/Video Playlist, where we need to insert and remove in the middle of sequence easily
+
+ A stack, by contrast, is a strict LIFO container where only the top element is accessible and push/pop happens in O(1), making it perfect for undo histories or recursion call stacks. Hence, stacks minimise overhead by only tracking the top—trading flexibility for ultrafast, constant-time access to the most recent item
+Example Use Case: Applications like editors where we push each action onto a stack so that we can easily pop to undo and then push to redo.
+
