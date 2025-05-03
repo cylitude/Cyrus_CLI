@@ -50,7 +50,7 @@ python -m linked_cli.cli --seed 42 -g 4 -o asc
 This will always generate the same 4 items every time seed 42 is used, while also sorting it in ascending order 
 
 Test Case 9 (Generating with a Seed, sorting it via Ascending Order and searching for a particular ID)
->> python -m linked_cli.cli --seed 42 -g 4 -o asc -s evblAb
+>> python -m linked_cli.cli --seed 42 -g 4 -o asc -s evblAb (or any other name that was generated above in Test Case 8)
 
 This will always generate the same 4 items every time seed 42 is used, while also sorting it in ascending order. Furthermore, it produces the Searched Item that was requested.
 
