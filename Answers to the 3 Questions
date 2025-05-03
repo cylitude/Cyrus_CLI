@@ -14,16 +14,12 @@ Splitting the list of size n into two halves of size n/2
 The method involves sorting each half recursively. If T(n) is the time to sort n items, we will obtain >> 2 x T(n/2)
 
 (3) Merge Step:
-Once we have two sorted halves, we can put them together in a single pass over all n elements. This phase leads to O(n) time to compare and link nodes. There are also log₂ n levels of splitting (because you halve n each time until you reach size 1).
-
-Thus, using the Master Theorem, we eventually obtain O(n log n).
+Once we have two sorted halves, we can put them together in a single pass over all n elements. This phase leads to O(n) time to compare and link nodes. There are also log₂ n levels of splitting (because you halve n each time until you reach size 1). Thus, using the Master Theorem, we eventually obtain O(n log n).
 
 Question 3:
 A linked list is a chain of nodes—each holding data and a next pointer—that lets you insert or remove at the head, tail (with a tail pointer), or any known position in O(1) time but costs O(n) to search for a value. Thus, linked lists carry extra pointer overhead per node but offer full traversal and mid-list mutation.
-
 Example Use Case: Music/Video Playlist, where we need to insert and remove in the middle of sequence easily
 
  A stack, by contrast, is a strict LIFO container where only the top element is accessible and push/pop happens in O(1), making it perfect for undo histories or recursion call stacks. Hence, stacks minimise overhead by only tracking the top—trading flexibility for ultrafast, constant-time access to the most recent item
-
 Example Use Case: Applications like editors where we push each action onto a stack so that we can easily pop to undo and then push to redo.
 
